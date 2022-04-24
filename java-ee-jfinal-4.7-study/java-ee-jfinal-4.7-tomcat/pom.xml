@@ -1,0 +1,187 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.billrobot</groupId>
+  <artifactId>ee-jfinal-tomcat</artifactId>
+  <version>1.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal</artifactId>
+      <version>4.7</version>
+    </dependency>
+    <!-- tomcat-embed-core -->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-core</artifactId>
+      <version>8.5.39</version>
+    </dependency>
+
+    <!-- tomcat-embed-el -->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-el</artifactId>
+      <version>8.5.39</version>
+    </dependency>
+
+    <!-- tomcat-embed-jasper -->
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <version>8.5.39</version>
+    </dependency>
+
+    <!-- javax.servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version>
+      <!--<scope>provided</scope> -->
+    </dependency>
+
+  </dependencies>
+
+
+  <!-- 分环境打包配置文件 -->
+  <profiles>
+    <!-- 本地环境 -->
+    <profile>
+      <id>local</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/resources/local</directory>
+          </resource>
+        </resources>
+      </build>
+
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <env.profile>local</env.profile>
+      </properties>
+    </profile>
+
+    <!-- 开发环境 -->
+    <profile>
+      <id>dev</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/resources/dev</directory>
+          </resource>
+        </resources>
+      </build>
+
+      <properties>
+        <env.profile>dev</env.profile>
+      </properties>
+    </profile>
+
+    <!--测试环境 -->
+    <profile>
+      <id>tests</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/resources/tests</directory>
+          </resource>
+        </resources>
+      </build>
+      <properties>
+        <env.profile>tests</env.profile>
+      </properties>
+    </profile>
+
+    <!--线上环境 -->
+    <profile>
+      <id>prod</id>
+      <build>
+        <resources>
+          <resource>
+            <directory>src/main/resources/prod</directory>
+          </resource>
+        </resources>
+      </build>
+
+      <properties>
+        <env.profile>prod</env.profile>
+      </properties>
+    </profile>
+
+  </profiles>
+
+  <build>
+    <finalName>tomcatEmbed</finalName>
+    <!-- -->
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>local/**</exclude>
+          <exclude>dev/**</exclude>
+          <exclude>tests/**</exclude>
+          <exclude>prod/**</exclude>
+        </excludes>
+        <filtering>true</filtering>
+      </resource>
+
+    </resources>
+
+    <plugins>
+      <!-- 编译插件 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <!-- jar 包中的配置文件优先级高于 config 目录下的 "同名文件" 因此，打包时需要排除掉 jar 包中来自 src/main/resources 目录的 配置文件，否则部署时 config 目录中的同名配置文件不会生效 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <excludes>
+            <exclude>/*.*</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+
+      <!-- 使用 mvn clean package 打包 更多配置可参考官司方文档：http://maven.apache.org/plugins/maven-assembly-plugin/single-mojo.html -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+
+            <configuration>
+              <!-- 打包生成的文件名 -->
+              <finalName>${project.build.finalName}</finalName>
+              <!-- jar 等压缩文件在被打包进入 zip、tar.gz 时是否压缩，设置为 false 可加快打包速度 -->
+              <recompressZippedFiles>true</recompressZippedFiles>
+              <!-- 打包生成的文件是否要追加 release.xml 中定义的 id 值 -->
+              <appendAssemblyId>true</appendAssemblyId>
+              <!-- 指向打包描述文件 package.xml -->
+              <descriptors>
+                <descriptor>package.xml</descriptor>
+              </descriptors>
+              <!-- 打包结果输出的基础目录 -->
+              <outputDirectory>${project.build.directory}/</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

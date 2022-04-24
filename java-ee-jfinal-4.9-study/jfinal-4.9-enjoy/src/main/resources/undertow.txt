@@ -1,0 +1,5 @@
+#自动热加载
+undertow.devMode=true
+undertow.host=127.0.0.1
+undertow.port=8000
+undertow.contextPath=/jfinal-4.9-enjoy

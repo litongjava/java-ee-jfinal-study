@@ -1,0 +1,4 @@
+undertow.devMode=true
+undertow.port=11023
+undertow.host=localhost
+undertow.contextPath=/ee-jfinal-undertow-servlet-filter

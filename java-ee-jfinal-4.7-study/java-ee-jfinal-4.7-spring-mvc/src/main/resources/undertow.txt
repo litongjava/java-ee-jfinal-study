@@ -1,0 +1,10 @@
+undertow.devMode=true
+#自动热加载
+undertow.devMode=true
+#监听的ip和端口
+undertow.host=0.0.0.0
+undertow.port=8006
+#工程路径
+undertow.contextPath=/ee-jfinal-spring-mvc
+#静态资源路径
+undertow.resourcePath = classpath:ee-jfinal-spring-mvc

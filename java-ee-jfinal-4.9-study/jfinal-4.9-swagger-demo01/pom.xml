@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.litong</groupId>
+    <artifactId>java-ee-jfinal-4.9-study</artifactId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>jfinal-4.9-swagger-demo01</artifactId>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+          <includes>
+            <include>com/**</include>
+            <include>cn/**</include>
+            <include>demo/**</include>
+          </includes>
+          <excludes>
+            <exclude>*.txt</exclude>
+            <exclude>*.xml</exclude>
+            <exclude>*.properties</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.lastB7</groupId>
+      <artifactId>jfinal-swagger-knife4j</artifactId>
+      <version>2.7</version>
+    </dependency>
+
+    <!-- jfinal -->
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal</artifactId>
+      <version>4.9.03</version>
+    </dependency>
+
+    <!-- jfinal-undertow 开发、部署一体化 web 服务器 -->
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal-undertow</artifactId>
+      <version>2.1</version>
+    </dependency>
+  </dependencies>
+</project>

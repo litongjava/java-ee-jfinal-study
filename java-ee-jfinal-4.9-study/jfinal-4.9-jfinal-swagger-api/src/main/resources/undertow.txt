@@ -1,0 +1,6 @@
+#自动热加载
+undertow.devMode=true
+undertow.port=8000
+undertow.contextPath=/jfinal-4.9-jfinal-swagger-api
+
+undertow.resourcePath = classpath:META-INF/resources,jfinal-4.9-jfinal-swagger-api

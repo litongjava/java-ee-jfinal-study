@@ -1,0 +1,10 @@
+# true 值支持热加载
+undertow.devMode=true
+undertow.port=80
+undertow.host=0.0.0.0
+ 
+# 绝大部分情况不建议配置 context path
+
+jdbc.url=jdbc:mysql://localhost/alit_url_manager
+jdbc.user=root
+jdbc.pswd=root

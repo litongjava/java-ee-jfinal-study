@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.alit</groupId>
+  <artifactId>ee-jfinal-controller</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+  </properties>
+  <dependencies>
+    <!-- jfinal dependency start -->
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal-undertow</artifactId>
+      <version>1.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal</artifactId>
+      <version>3.8</version>
+    </dependency>
+    <!-- jfinal dependency end -->
+
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <!-- java编译插件 -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <encoding>UTF-8</encoding>
+          <!-- java8 保留参数名编译参数 -->
+          <compilerArgument>-parameters</compilerArgument>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,14 @@
+undertow.devMode=true
+undertow.port=11020
+undertow.host=0.0.0.0
+undertow.contextPath=/layui
+undertow.resourcePath = classpath:layui
+#jdbc-mysql
+jdbc.url=jdbc:mysql://localhost/face_recognize?serverTimezone=UTC&characterEncoding=UTF8
+jdbc.user=root
+jdbc.pswd=robot_123456#
+jdbc.showSql=true
+
+project.auth.enable=false
+#人脸图片存放路径
+project.image.face.save.path=image/face

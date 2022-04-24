@@ -1,0 +1,5 @@
+undertow.devMode=true
+undertow.port=11023
+undertow.host=127.0.0.1
+undertow.contextPath=/ee-jfinal-undertow-servlet-hello
+undertow.resourcePath = classpath:ee-jfinal-undertow-servlet-hello

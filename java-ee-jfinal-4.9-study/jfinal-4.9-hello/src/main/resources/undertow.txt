@@ -1,0 +1,2 @@
+#自动热加载
+undertow.devMode=true

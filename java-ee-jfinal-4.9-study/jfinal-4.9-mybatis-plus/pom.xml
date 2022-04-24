@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.litong</groupId>
+    <artifactId>java-ee-jfinal-4.9-study</artifactId>
+    <version>1.0</version>
+  </parent>
+  <groupId>com.ppnt</groupId>
+  <artifactId>jfinal-4.9-mybatis-plus</artifactId>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+  </properties>
+
+  <!-- 使用阿里 maven 库 -->
+  <repositories>
+    <repository>
+      <id>ali-maven</id>
+      <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+  <dependencies>
+
+    <!-- jfinal -->
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal</artifactId>
+      <version>4.9.15</version>
+    </dependency>
+
+    <!-- jfinal-undertow 开发、部署一体化 web 服务器 -->
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>jfinal-undertow</artifactId>
+      <version>2.5</version>
+    </dependency>
+
+    <!-- cos 文件上传 -->
+    <dependency>
+      <groupId>com.jfinal</groupId>
+      <artifactId>cos</artifactId>
+      <version>2020.4</version>
+    </dependency>
+
+    <!-- logback -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <!-- mysql 驱动 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.44</version>
+    </dependency>
+
+    <!-- druid 数据源连接池 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.0.29</version>
+    </dependency>
+
+    <!-- junit 单元测试 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.16</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-generator</artifactId>
+      <version>3.1.1</version>
+    </dependency>
+
+  </dependencies>
+</project>
