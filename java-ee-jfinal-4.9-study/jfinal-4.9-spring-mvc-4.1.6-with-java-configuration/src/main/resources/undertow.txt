@@ -1,3 +1,0 @@
-undertow.devMode=true
-undertow.port=11023
-undertow.host=0.0.0.0

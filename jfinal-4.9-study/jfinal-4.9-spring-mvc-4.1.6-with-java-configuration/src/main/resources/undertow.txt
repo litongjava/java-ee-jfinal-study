@@ -1,0 +1,5 @@
+undertow.devMode=true
+undertow.port=11023
+undertow.host=0.0.0.0
+undertow.contextPath=/jfinal-4.9-spring-mvc-4.1.6-with-java
+undertow.resourcePath = classpath:jfinal-4.9-spring-mvc-4.1.6-with-java

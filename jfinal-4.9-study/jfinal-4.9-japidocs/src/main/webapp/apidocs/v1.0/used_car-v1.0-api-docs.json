@@ -1,0 +1,66 @@
+{
+   "info": {
+      "_postman_id": "",
+      "name": "used_car",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+   },
+   "item": [
+      {
+         "name": "CarApiController",
+         "item": [
+               {
+               "name": "获取所有车辆品牌列表",
+               "request": {
+                  "header": [{
+                        "key": "JBOLTAPI",
+                        "value": "true",
+                        "type": "text"
+                     },
+                     {
+                        "key": "jboltappid",
+                           "value": "{{wxa_appid}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "jboltjwt",
+                        "value": "{{app_jwt}}",
+                        "type": "text"
+                     }
+                  ],
+                  "url": {
+                     "raw": "{{domain}}/wxa/car/getBrandsAll",
+                     "query": [
+                        ]
+                     }
+                  }
+               },
+               {
+               "name": "获取车系列表",
+               "request": {
+                  "header": [{
+                        "key": "JBOLTAPI",
+                        "value": "true",
+                        "type": "text"
+                     },
+                     {
+                        "key": "jboltappid",
+                           "value": "{{wxa_appid}}",
+                        "type": "text"
+                     },
+                     {
+                        "key": "jboltjwt",
+                        "value": "{{app_jwt}}",
+                        "type": "text"
+                     }
+                  ],
+                  "url": {
+                     "raw": "{{domain}}/wxa/car/getSeries",
+                     "query": [
+                        ]
+                     }
+                  }
+               }
+         ]
+      }
+   ]
+}

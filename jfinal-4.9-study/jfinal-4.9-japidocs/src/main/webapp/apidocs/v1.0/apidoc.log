@@ -1,0 +1,24 @@
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: find java src paths:  [D:\code\java\java-study\java-ee-jfinal-study\java-ee-jfinal-4.9-study\jfinal-4.9-japidocs\src\main\java\]
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: project type not set, try to figure out...
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start find controllers in path : D:\code\java\java-study\java-ee-jfinal-study\java-ee-jfinal-4.9-study\jfinal-4.9-japidocs\src\main\java\
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: Jfinal config file path : D:\code\java\java-study\java-ee-jfinal-study\java-ee-jfinal-4.9-study\jfinal-4.9-japidocs\src\main\java\top\ppnt\modules\jfinal\api\docs\config\ApiDocsConfig.java
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to parse controller file : CarApiController.java
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to parse controller file : CarApiController.java
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate api docs start...
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: start to generate docs for controller file : D:\code\java\java-study\java-ee-jfinal-study\java-ee-jfinal-4.9-study\jfinal-4.9-japidocs\src\main\java\top\ppnt\modules\jfinal\api\docs\controller\CarApiController.java
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: success to generate docs for controller file : D:\code\java\java-study\java-ee-jfinal-study\java-ee-jfinal-4.9-study\jfinal-4.9-japidocs\src\main\java\top\ppnt\modules\jfinal\api\docs\controller\CarApiController.java
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate index start !!!
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate index done !!!
+四月 28, 2022 12:24:23 上午 io.github.yedaxia.apidocs.LogUtils info
+信息: info: generate api docs done !!!

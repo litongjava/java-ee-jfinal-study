@@ -1,5 +1,0 @@
-undertow.devMode=true
-undertow.port=11023
-undertow.host=0.0.0.0
-undertow.contextPath=/ee-jfinal-4.9-spring-boot-2.0.7
-undertow.resourcePath = classpath:ee-jfinal-4.9-spring-boot-2.0.7
