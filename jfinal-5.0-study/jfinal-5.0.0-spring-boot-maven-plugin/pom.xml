@@ -67,6 +67,15 @@
         <version>2.7.4</version>
         <configuration>
           <mainClass>demo.DemoApp</mainClass>
+          <!-- 设置为ZIP，此模式下spring-boot-maven-plugin会将Manifest.MF文件中的Main-Class设置为org.springframework.boot.loader.PropertiesLauncher -->
+          <layout>ZIP</layout>
+          <includes>
+            <!--必须包含一个,哪怕实际的包含不存在-->
+            <include>
+              <groupId>com.digitalgd</groupId>
+              <artifactId>ztbjg-portal-service</artifactId>
+            </include>
+          </includes>
         </configuration>
         <!-- 设置执行目标 -->
         <executions>
