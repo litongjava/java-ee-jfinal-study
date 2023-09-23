@@ -3,6 +3,9 @@ package demo;
 import com.jfinal.core.Controller;
 import com.jfinal.core.Path;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Path("/hello")
 public class HelloController extends Controller {
   public void index() {
@@ -50,4 +53,10 @@ public class HelloController extends Controller {
     renderText(name + ":" + id + ":" + a + ":" + b);
   }
 
+  //http://localhost/hello/jsonMap
+  public Map<String, String> jsonMap() {
+    Map<String, String> map = new HashMap<>();
+    map.put("name", "liotng");
+    return map;
+  }
 }
