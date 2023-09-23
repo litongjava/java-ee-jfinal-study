@@ -6,6 +6,6 @@ import com.jfinal.core.Path;
 @Path("/hello")
 public class HelloController extends Controller {
   public void index() {
-    renderText("Hello JFinal World.");
+    renderText("Hello JFinal World 111s");
   }
 }
